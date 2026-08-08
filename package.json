@@ -1,0 +1,40 @@
+{
+  "name": "archive-org-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the Internet Archive, search old software, bootleg concerts, 78rpm records, and dead web pages.",
+  "type": "module",
+  "mcpName": "io.github.mrfentmen/archive-org-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrfentmen/archive-org-mcp.git"
+  },
+  "bin": {
+    "archive-org-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "rm -rf dist && tsc -p tsconfig.json && node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "archive",
+    "wayback",
+    "retro",
+    "media"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
